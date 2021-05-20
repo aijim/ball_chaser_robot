@@ -34,12 +34,13 @@ void process_image_callback(const sensor_msgs::Image img)
         {
             found = true;
             if(x<img.width/3){
-                drive_robot(0.0, 0.2);
+                drive_robot(0.0, 0.01);
              }else if(x>2*img.width/3){
-                 drive_robot(0.0, -0.2);
+                 drive_robot(0.0, -0.01);
              }else{
-                 drive_robot(0.2, 0.0);
+                 drive_robot(0.05, 0.0);
              }
+             break;
         }
     }
     if(!found)
