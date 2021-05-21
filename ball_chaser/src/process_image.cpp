@@ -34,9 +34,9 @@ void process_image_callback(const sensor_msgs::Image img)
         {
             found = true;
             if(x<img.width/3){
-                drive_robot(0.0, 0.01);
+                drive_robot(0.0, -0.05);
              }else if(x>2*img.width/3){
-                 drive_robot(0.0, -0.01);
+                 drive_robot(0.0, 0.05);
              }else{
                  drive_robot(0.05, 0.0);
              }
